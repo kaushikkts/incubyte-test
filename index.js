@@ -30,6 +30,3 @@ const addStringNumbers = (stringNums) => {
 }
 
 module.exports = addStringNumbers;
-
-
-// addStringNumbers('//;\n1;2;3;4;5;6')

@@ -24,5 +24,17 @@ describe('String calculator', () => {
         expect(addStringNumbers('//--\n1--2--3--A')).toBe(NaN);
     });
 
+    test('should handle large numbers', () => {
+        expect(addStringNumbers('10000,2334534,1003453450')).toBe(1005797984);
+    });
+
+    test('should handle empty string', () => {
+        expect(addStringNumbers('')).toBe(0);
+    });
+
+    test('should handle single number', () => {
+        expect(addStringNumbers('1')).toBe(1);
+    });
+
 
 });
