@@ -11,8 +11,14 @@ const addStringNumbers = (stringNums) => {
 
     }
 
-    console.log(stringNums);
-     return stringNums.split(delimiter).map(numStr => parseInt(numStr));
+    const numbers = stringNums.split(delimiter).map(numStr => parseInt(numStr));
+    let sum = 0;
+    numbers.forEach(num => {
+        if (num < 0) throw new Error('Negative numbers not allowed: ' + num);
+        sum += num;
+    });
+
+    return sum;
 
 }
 
