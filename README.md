@@ -20,8 +20,11 @@ Ignores empty input and returns 0.
 
 ##### Add console.log statements to the end of the index.js file to test it
 console.log(addStringNumbers("1,2,3")); // Output: 6
+<br/> 
 console.log(addStringNumbers("1\n2,3")); // Output: 6
+<br/>
 console.log(addStringNumbers("//;\n1;2;3")); // Output: 6
+<br/>
 console.log(addStringNumbers("")); // Output: 0
 
 ## Handling Negative Numbers
