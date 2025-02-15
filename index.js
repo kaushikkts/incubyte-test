@@ -1,7 +1,8 @@
 
 
 const addStringNumbers = (stringNums) => {
-    if (!stringNums) return 0;
+    // even if no input is passed, we will return 0
+    if (!stringNums?.trim()) return 0;
     let delimiter = /[,\n]+/;
     if (stringNums.startsWith('//')) {
         // This means that we are changing the delimiter
