@@ -11,6 +11,11 @@ describe('String calculator', () => {
         // expect(addStringNumbers('//;\n1;-2')).toThrow('Negative numbers not allowed: -2');
     });
 
+    test('should throw Error on multiple negative numbers and display all of them', () => {
+        expect(() => addStringNumbers('//;\n1;-2;-3;-4')).toThrow('Negative numbers not allowed: -2, -3, -4');
+        // expect(addStringNumbers('//;\n1;-2')).toThrow('Negative numbers not allowed: -2');
+    });
+
     test('should handle multi delimiter change', () => {
         expect(addStringNumbers('//--\n1--2')).toBe(3);
     });
