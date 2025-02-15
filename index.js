@@ -6,13 +6,14 @@ const addStringNumbers = (stringNums) => {
     if (stringNums.startsWith('//')) {
         // This means that we are changing the delimiter
         const delimiterEnd = stringNums.indexOf('\n');
+        // because the startsWith has 2 characters, we need to start the substring
+        // at character 3 which is (2) as it is 0 indexed
         delimiter = stringNums.substring(2, delimiterEnd);
         stringNums = stringNums.substring(delimiterEnd + 1);
 
     }
 
     const numbers = stringNums.split(delimiter).map(numStr => parseInt(numStr.trim(), 10));
-    console.log(numbers);
     let sum = 0;
     let negativeNumbers = [];
     numbers.forEach(num => {
@@ -31,7 +32,3 @@ const addStringNumbers = (stringNums) => {
 }
 
 module.exports = addStringNumbers;
-
-
-
-addStringNumbers('1\n2\n3')
